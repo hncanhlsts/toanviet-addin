@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<OfficeApp xmlns="http://schemas.microsoft.com/office/appforoffice/1.1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:bt="http://schemas.microsoft.com/office/officeappbasictypes/1.0" xmlns:ov="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="TaskPaneApp">
+  <Id>7c1e3f52-9a4b-4d6e-b8f1-2a5d0c9e7b31</Id>
+  <Version>1.0.0.0</Version>
+  <ProviderName>ToanViet Studio</ProviderName>
+  <DefaultLocale>vi-VN</DefaultLocale>
+  <DisplayName DefaultValue="ToanViet"/>
+  <Description DefaultValue="Soạn công thức Toán phổ thông Việt Nam và chèn vào Word, PowerPoint."/>
+  <IconUrl DefaultValue="https://hncanhlsts.github.io/toanviet-addin/icon-32.png"/>
+  <HighResolutionIconUrl DefaultValue="https://hncanhlsts.github.io/toanviet-addin/icon-80.png"/>
+  <SupportUrl DefaultValue="https://hncanhlsts.github.io/toanviet-addin/index.html"/>
+  <AppDomains>
+    <AppDomain>https://hncanhlsts.github.io</AppDomain>
+  </AppDomains>
+  <Hosts>
+    <Host Name="Document"/>
+    <Host Name="Presentation"/>
+  </Hosts>
+  <DefaultSettings>
+    <SourceLocation DefaultValue="https://hncanhlsts.github.io/toanviet-addin/taskpane.html"/>
+  </DefaultSettings>
+  <Permissions>ReadWriteDocument</Permissions>
+  <VersionOverrides xmlns="http://schemas.microsoft.com/office/taskpaneappversionoverrides" xsi:type="VersionOverridesV1_0">
+    <Hosts>
+      <Host xsi:type="Document">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="TV.GroupWord">
+                <Label resid="TV.GroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="TV.Icon16"/>
+                  <bt:Image size="32" resid="TV.Icon32"/>
+                  <bt:Image size="80" resid="TV.Icon80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TV.ButtonWord">
+                  <Label resid="TV.ButtonLabel"/>
+                  <Supertip>
+                    <Title resid="TV.ButtonLabel"/>
+                    <Description resid="TV.ButtonTip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="TV.Icon16"/>
+                    <bt:Image size="32" resid="TV.Icon32"/>
+                    <bt:Image size="80" resid="TV.Icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TV.Pane</TaskpaneId>
+                    <SourceLocation resid="TV.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+      <Host xsi:type="Presentation">
+        <DesktopFormFactor>
+          <ExtensionPoint xsi:type="PrimaryCommandSurface">
+            <OfficeTab id="TabHome">
+              <Group id="TV.GroupPpt">
+                <Label resid="TV.GroupLabel"/>
+                <Icon>
+                  <bt:Image size="16" resid="TV.Icon16"/>
+                  <bt:Image size="32" resid="TV.Icon32"/>
+                  <bt:Image size="80" resid="TV.Icon80"/>
+                </Icon>
+                <Control xsi:type="Button" id="TV.ButtonPpt">
+                  <Label resid="TV.ButtonLabel"/>
+                  <Supertip>
+                    <Title resid="TV.ButtonLabel"/>
+                    <Description resid="TV.ButtonTip"/>
+                  </Supertip>
+                  <Icon>
+                    <bt:Image size="16" resid="TV.Icon16"/>
+                    <bt:Image size="32" resid="TV.Icon32"/>
+                    <bt:Image size="80" resid="TV.Icon80"/>
+                  </Icon>
+                  <Action xsi:type="ShowTaskpane">
+                    <TaskpaneId>TV.Pane</TaskpaneId>
+                    <SourceLocation resid="TV.Url"/>
+                  </Action>
+                </Control>
+              </Group>
+            </OfficeTab>
+          </ExtensionPoint>
+        </DesktopFormFactor>
+      </Host>
+    </Hosts>
+    <Resources>
+      <bt:Images>
+        <bt:Image id="TV.Icon16" DefaultValue="https://hncanhlsts.github.io/toanviet-addin/icon-16.png"/>
+        <bt:Image id="TV.Icon32" DefaultValue="https://hncanhlsts.github.io/toanviet-addin/icon-32.png"/>
+        <bt:Image id="TV.Icon80" DefaultValue="https://hncanhlsts.github.io/toanviet-addin/icon-80.png"/>
+      </bt:Images>
+      <bt:Urls>
+        <bt:Url id="TV.Url" DefaultValue="https://hncanhlsts.github.io/toanviet-addin/taskpane.html"/>
+      </bt:Urls>
+      <bt:ShortStrings>
+        <bt:String id="TV.GroupLabel" DefaultValue="ToanViet"/>
+        <bt:String id="TV.ButtonLabel" DefaultValue="Công thức Toán"/>
+      </bt:ShortStrings>
+      <bt:LongStrings>
+        <bt:String id="TV.ButtonTip" DefaultValue="Mở khung ToanViet để soạn công thức, dấu đồng dạng, góc, cung và chèn vào tài liệu."/>
+      </bt:LongStrings>
+    </Resources>
+  </VersionOverrides>
+</OfficeApp>

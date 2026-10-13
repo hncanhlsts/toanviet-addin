@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToanViet – Công thức Toán</title>
+<script src="https://appsforoffice.microsoft.com/lib/1/hosted/office.js"></script>
+<link rel="stylesheet" href="fonts-inline.css">
+<link rel="stylesheet" href="mathlive-static.css">
+<link rel="stylesheet" href="taskpane.css">
+</head>
+<body>
+<header>
+  <b>ToanViet</b>
+  <select id="grp" title="Nhóm ký hiệu"></select>
+</header>
+<div id="palette"></div>
+<div id="mfwrap"></div>
+<input id="tex" spellcheck="false" placeholder="Mã LaTeX (tuỳ chọn)">
+<div class="row">
+  <label>Cỡ chữ <input id="size" type="number" min="8" max="96" value="18"></label>
+  <label>Màu <input id="color" type="color" value="#000000"></label>
+  <button id="clear" title="Xoá ô soạn">Xoá</button>
+</div>
+<div class="row">
+  <button id="insert" class="primary" title="Ctrl+Enter">Chèn vào tài liệu</button>
+  <button id="edit" title="Chọn một công thức ToanViet trong tài liệu rồi bấm để sửa lại">Sửa công thức đang chọn</button>
+</div>
+<div id="status">Enter: xuống dòng · Ctrl+Enter: chèn</div>
+<img id="preview" alt="">
+<div id="meas"></div>
+<script src="mathlive.min.js"></script>
+<script src="symbols.js"></script>
+<script src="taskpane.js"></script>
+</body>
+</html>

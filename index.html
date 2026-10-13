@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ToanViet – add-in cho Word và PowerPoint</title>
+<style>
+  body { font: 16px/1.6 "Segoe UI", Tahoma, sans-serif; color: #1c2430; max-width: 720px; margin: 0 auto; padding: 24px 16px; }
+  h1 { color: #1f5fbf; font-size: 26px; }
+  code { background: #eef2f6; padding: 1px 5px; border-radius: 3px; }
+  a.btn { display: inline-block; background: #1f5fbf; color: #fff; padding: 8px 16px; border-radius: 6px; text-decoration: none; }
+</style>
+</head>
+<body>
+<h1>ToanViet – add-in công thức Toán cho Word và PowerPoint</h1>
+<p>Soạn công thức Toán phổ thông Việt Nam (dấu đồng dạng kiểu sách giáo khoa, góc, cung, hệ phương trình, nhiều dòng) ngay trong Word và PowerPoint, chèn thành ảnh nét cao và mở lại để sửa.</p>
+<p><a class="btn" href="manifest.xml" download>Tải tệp manifest.xml</a> &nbsp; <a href="taskpane.html">Xem thử khung soạn công thức</a></p>
+<h2>Cài vào Word / PowerPoint trên Windows</h2>
+<ol>
+  <li>Tải <code>manifest.xml</code> ở trên và lưu vào một thư mục cố định (ví dụ <code>Documents\ToanVietAddin</code>).</li>
+  <li>Chia sẻ thư mục đó (chuột phải ▸ Properties ▸ Sharing ▸ Share) và chép đường dẫn mạng dạng <code>\\TÊN-MÁY\ToanVietAddin</code>.</li>
+  <li>Trong Word: File ▸ Options ▸ Trust Center ▸ Trust Center Settings ▸ Trusted Add-in Catalogs. Dán đường dẫn vào ô Catalog Url, bấm Add catalog, đánh dấu Show in Menu, bấm OK rồi khởi động lại Word.</li>
+  <li>Insert ▸ Get Add-ins (My Add-ins) ▸ Shared Folder ▸ chọn ToanViet ▸ Add. Nút <b>Công thức Toán</b> xuất hiện trên thẻ Home của Word và PowerPoint.</li>
+</ol>
+<p>Với Word/PowerPoint trên web: Insert ▸ Add-ins ▸ Upload My Add-in rồi chọn tệp <code>manifest.xml</code>.</p>
+</body>
+</html>
